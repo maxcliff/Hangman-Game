@@ -4,10 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Hang Man</title>
 </head>
 <body>
     <h1>Hang Man</h1>
+    
+    <script>
+        
+        var randomWordArr = ["cheese", "pizza", "newspaper", "bricks", "cabinet", "kitchen", "pumpkin"];
+
+        //random word from the array above
+        var randomWord = randomWordArr[Math.floor(Math.random() * randomWordArr.length)];
+
+
+        var t;
+        var count= 0;
+
+        //empty array to store the user guesses
+        var answerArray = [];
+
+        //used for the underscores for the guesses
+        //no. of spaces for underscores matches the amount of letters in the word//
+        function startUp()
+        {
+
+
+            for (var i = 0; i < randomWord.length; i++);{
+            answerArray[i] = "_";
+            
+            }
+
+            //put into a string
+            t = answerArray.join(" ");
+            document.getElementById("answer").innerHTML = t;
+        }
+    
+    
+    
+    
+    
+    
+    </script>
     
 </body>
 </html>
