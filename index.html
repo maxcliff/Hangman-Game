@@ -5,46 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hang Man</title>
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    
+
 </head>
 <body>
-    <h1>Hang Man</h1>
+
+    <header>
+
+        <h1>Mario Hang Man</h1>
+
+
+
+        <img src="mariobros.jpg"  alt="mario">
+
+
+    </header>
+
+    <br> <br>
+   
+    <p>Answer: <span id="answer"></span></p>
     
-    <script>
-        
-        var randomWordArr = ["cheese", "pizza", "newspaper", "bricks", "cabinet", "kitchen", "pumpkin"];
+    <input id="user-input" type="text">
 
-        //random word from the array above
-        var randomWord = randomWordArr[Math.floor(Math.random() * randomWordArr.length)];
-
-
-        var t;
-        var count= 0;
-
-        //empty array to store the user guesses
-        var answerArray = [];
-
-        //used for the underscores for the guesses
-        //no. of spaces for underscores matches the amount of letters in the word//
-        function startUp()
-        {
-
-
-            for (var i = 0; i < randomWord.length; i++);{
-            answerArray[i] = "_";
-            
-            }
-
-            //put into a string
-            t = answerArray.join(" ");
-            document.getElementById("answer").innerHTML = t;
-        }
-    
-    
-    
-    
-    
-    
-    </script>
+    <div class="underscores">_ _ _ _</div>
+    <br><br>
+    <div class="rightGuess">right guess</div>
+    <br><br>
+    <div class="wrongGuess">wrong guess</div>
     
 </body>
+
+<script type= "text/javascript" src= "assets/javascript/game.js"></script>
+
 </html>
